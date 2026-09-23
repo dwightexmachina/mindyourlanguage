@@ -89,6 +89,7 @@ class Game {
   final String titleLine1;
   final String titleLine2;
   final String tileLabel; // shown on the Game Select card (e.g. "English")
+  final String taunt; // one-word taunt in the card's speech bubble (e.g. "Oi!")
   final String subtitle;
   final String selectBlurb; // one-liner on the game-select card
   final Color accent; // logo / branding colour
@@ -102,6 +103,7 @@ class Game {
     required this.titleLine1,
     required this.titleLine2,
     required this.tileLabel,
+    required this.taunt,
     required this.subtitle,
     required this.selectBlurb,
     required this.accent,

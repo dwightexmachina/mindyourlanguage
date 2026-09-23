@@ -649,6 +649,7 @@ final List<Zone> _germanZones = [
 
 final Game germanGame = Game(
   id: 'german',
+  taunt: 'Na?',
   titleLine1: 'GROSSE',
   titleLine2: 'KLAPPE',
   tileLabel: 'Deutsch',

@@ -53,36 +53,119 @@ class _Chip extends StatelessWidget {
 }
 
 // --------------------------------------------------------------------------
-// Game Select (root)
+// Game Select (root / Title Screen) — the landing screen, so it earns some
+// life: the collage street shows through, the title + cards rise in on load,
+// the avatars idle-bob, and each carries a signature taunt bubble.
 // --------------------------------------------------------------------------
-class GameSelectOverlay extends StatelessWidget {
+class GameSelectOverlay extends StatefulWidget {
   final GameController g;
   final void Function(Game) onSelect;
   const GameSelectOverlay(this.g, {super.key, required this.onSelect});
+  @override
+  State<GameSelectOverlay> createState() => _GameSelectOverlayState();
+}
+
+class _GameSelectOverlayState extends State<GameSelectOverlay>
+    with TickerProviderStateMixin {
+  late final AnimationController _enter;
+  late final AnimationController _bob;
+
+  @override
+  void initState() {
+    super.initState();
+    _enter = AnimationController(vsync: this, duration: const Duration(milliseconds: 850))
+      ..forward();
+    _bob = AnimationController(vsync: this, duration: const Duration(milliseconds: 2600))
+      ..repeat(reverse: true);
+  }
+
+  @override
+  void dispose() {
+    _enter.dispose();
+    _bob.dispose();
+    super.dispose();
+  }
+
+  /// Staggered fade + slide-up entrance for the item at [order].
+  Widget _rise(int order, Widget child) => AnimatedBuilder(
+        animation: _enter,
+        builder: (_, c) {
+          final t = ((_enter.value - order * 0.09) / 0.55).clamp(0.0, 1.0);
+          final e = Curves.easeOutCubic.transform(t);
+          return Opacity(
+            opacity: e,
+            child: Transform.translate(offset: Offset(0, (1 - e) * 28), child: c),
+          );
+        },
+        child: child,
+      );
 
   @override
   Widget build(BuildContext context) {
-    return _Scrim(
-      opacity: 0.94,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
+    final g = widget.g;
+    return Positioned.fill(
+      child: Stack(
         children: [
-          Text('MIND YOUR LANGUAGE',
-              textAlign: TextAlign.center,
-              style: T.logo(42, color: C.cream)),
-          const SizedBox(height: 12),
-          const Text('SELECT A GAME',
-              style: TextStyle(
-                  color: C.txtDim, letterSpacing: 6, fontWeight: FontWeight.w800, fontSize: 13)),
-          const SizedBox(height: 22),
-          Wrap(
-            alignment: WrapAlignment.center,
-            spacing: 16,
-            runSpacing: 16,
-            children: [
-              for (final game in g.games)
-                _GameCard(game: game, best: g.bestForGame(game), onTap: () => onSelect(game)),
-            ],
+          // Let the collage street peek through, dark top & bottom for contrast.
+          Positioned.fill(
+            child: IgnorePointer(
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      C.panel.withValues(alpha: 0.90),
+                      C.panel.withValues(alpha: 0.52),
+                      C.panel.withValues(alpha: 0.88),
+                    ],
+                    stops: const [0.0, 0.5, 1.0],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Center(
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.all(24),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  _rise(0,
+                      Text('MIND YOUR LANGUAGE',
+                          textAlign: TextAlign.center,
+                          style: T.logo(44, color: C.cream))),
+                  const SizedBox(height: 10),
+                  _rise(
+                      1,
+                      Text("THE WORLD'S RUDEST LANGUAGE COURSE",
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                              color: C.brass,
+                              letterSpacing: 3,
+                              fontWeight: FontWeight.w800,
+                              fontSize: 13))),
+                  const SizedBox(height: 24),
+                  Wrap(
+                    alignment: WrapAlignment.center,
+                    spacing: 16,
+                    runSpacing: 16,
+                    children: [
+                      for (var i = 0; i < g.games.length; i++)
+                        _rise(
+                          2 + i,
+                          _GameCard(
+                            game: g.games[i],
+                            best: g.bestForGame(g.games[i]),
+                            bob: _bob,
+                            onTap: () => widget.onSelect(g.games[i]),
+                          ),
+                        ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ),
         ],
       ),
@@ -93,8 +176,10 @@ class GameSelectOverlay extends StatelessWidget {
 class _GameCard extends StatefulWidget {
   final Game game;
   final int best;
+  final Animation<double> bob;
   final VoidCallback onTap;
-  const _GameCard({required this.game, required this.best, required this.onTap});
+  const _GameCard(
+      {required this.game, required this.best, required this.bob, required this.onTap});
   @override
   State<_GameCard> createState() => _GameCardState();
 }
@@ -113,25 +198,37 @@ class _GameCardState extends State<_GameCard> {
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 100),
           width: 278,
-          transform: Matrix4.translationValues(0, _hover ? -3 : 0, 0),
+          transform: Matrix4.translationValues(0, _hover ? -4 : 0, 0),
           padding: const EdgeInsets.fromLTRB(16, 16, 16, 18),
           decoration: BoxDecoration(
             color: C.panel2,
             borderRadius: BorderRadius.circular(14),
-            border: Border.all(
-                color: _hover ? game.accent : C.panelEdge, width: 2),
+            border: Border.all(color: _hover ? game.accent : C.panelEdge, width: 2),
             boxShadow: _hover
-                ? [BoxShadow(color: game.accent.withValues(alpha: 0.3), blurRadius: 18)]
-                : null,
+                ? [BoxShadow(color: game.accent.withValues(alpha: 0.35), blurRadius: 20)]
+                : const [C.cutShadow],
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // bobbing avatar with a taunt bubble
               SizedBox(
-                height: 130,
-                child: Center(child: CharacterView(spec: game.avatar, height: 130)),
+                height: 138,
+                child: Stack(
+                  clipBehavior: Clip.none,
+                  alignment: Alignment.center,
+                  children: [
+                    AnimatedBuilder(
+                      animation: widget.bob,
+                      builder: (_, c) => Transform.translate(
+                          offset: Offset(0, widget.bob.value * 7 - 3.5), child: c),
+                      child: CharacterView(spec: game.avatar, height: 130),
+                    ),
+                    Positioned(top: 2, right: 8, child: _TauntBubble(game.taunt, game.accent)),
+                  ],
+                ),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 8),
               Text(game.tileLabel, style: T.logo(34, color: game.accent)),
               const SizedBox(height: 8),
               Text(game.subtitle,
@@ -157,6 +254,28 @@ class _GameCardState extends State<_GameCard> {
       ),
     );
   }
+}
+
+/// A little cut-out taunt bubble ("Oi!", "¡Oye!", "Na?") for the card avatars.
+class _TauntBubble extends StatelessWidget {
+  final String text;
+  final Color accent;
+  const _TauntBubble(this.text, this.accent);
+  @override
+  Widget build(BuildContext context) => Transform.rotate(
+        angle: 0.06,
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+          decoration: BoxDecoration(
+            color: C.cream,
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(color: C.ink, width: 1.6),
+            boxShadow: const [C.cutShadow],
+          ),
+          child: Text(text,
+              style: TextStyle(fontFamily: kDisplayFont, fontSize: 15, color: accent)),
+        ),
+      );
 }
 
 // --------------------------------------------------------------------------

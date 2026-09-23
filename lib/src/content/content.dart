@@ -49,6 +49,7 @@ const englishStrings = Strings(
 
 final Game britishGame = Game(
   id: 'british',
+  taunt: 'Oi!',
   titleLine1: 'MIND YOUR',
   titleLine2: 'LANGUAGE',
   tileLabel: 'English',
