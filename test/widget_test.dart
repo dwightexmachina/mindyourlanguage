@@ -6,6 +6,7 @@ void main() {
   testWidgets('boots to the game-select screen', (tester) async {
     await tester.pumpWidget(const MylApp());
     await tester.pump();
-    expect(find.text('SELECT A GAME'), findsOneWidget);
+    expect(find.text('English'), findsOneWidget);
+    expect(find.text('Ελληνικά'), findsOneWidget);
   });
 }
