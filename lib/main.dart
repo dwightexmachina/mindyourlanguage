@@ -265,7 +265,7 @@ class _GameScreenState extends State<GameScreen> with TickerProviderStateMixin {
           children: [
             Text(g.s.howRespond,
                 style: const TextStyle(
-                    fontFamily: kDisplayFont, fontSize: 20, color: C.cream, letterSpacing: 1.2)),
+                    fontFamily: kDisplayFont, fontFamilyFallback: kSerif, fontSize: 20, color: C.cream, letterSpacing: 1.2)),
             const SizedBox(width: 10),
             Flexible(
               child: Text(g.s.respondSub,
@@ -410,7 +410,7 @@ class _ChoiceCardState extends State<_ChoiceCard> {
                   ),
                   child: Text(widget.letter,
                       style: const TextStyle(
-                          fontFamily: kDisplayFont, fontSize: 16, color: C.brass)),
+                          fontFamily: kDisplayFont, fontFamilyFallback: kSerif, fontSize: 16, color: C.brass)),
                 ),
                 const SizedBox(width: 12),
                 Expanded(

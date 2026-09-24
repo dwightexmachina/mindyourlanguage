@@ -51,7 +51,7 @@ class SpeechBubble extends StatelessWidget {
           children: [
             Text(who,
                 style: TextStyle(
-                    fontFamily: kDisplayFont,
+                    fontFamily: kDisplayFont, fontFamilyFallback: kSerif,
                     fontSize: 15,
                     letterSpacing: 0.5,
                     color: accent)),
@@ -95,7 +95,7 @@ class ChunkyButton extends StatelessWidget {
         ),
         child: Text(label,
             style: TextStyle(
-                fontFamily: kDisplayFont,
+                fontFamily: kDisplayFont, fontFamilyFallback: kSerif,
                 fontSize: fontSize,
                 letterSpacing: 0.5,
                 color: textColor)),

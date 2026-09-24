@@ -25,7 +25,7 @@ Widget _big(String text, Color color, {double size = 52}) => Text(
       text,
       textAlign: TextAlign.center,
       style: TextStyle(
-        fontFamily: kDisplayFont,
+        fontFamily: kDisplayFont, fontFamilyFallback: kSerif,
         fontSize: size,
         height: 1.02,
         color: color,
@@ -148,8 +148,8 @@ class _GameSelectOverlayState extends State<GameSelectOverlay>
                   const SizedBox(height: 24),
                   Wrap(
                     alignment: WrapAlignment.center,
-                    spacing: 16,
-                    runSpacing: 16,
+                    spacing: 12,
+                    runSpacing: 12,
                     children: [
                       for (var i = 0; i < g.games.length; i++)
                         _rise(
@@ -197,9 +197,9 @@ class _GameCardState extends State<_GameCard> {
         onTap: widget.onTap,
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 100),
-          width: 278,
+          width: 224,
           transform: Matrix4.translationValues(0, _hover ? -4 : 0, 0),
-          padding: const EdgeInsets.fromLTRB(16, 16, 16, 18),
+          padding: const EdgeInsets.fromLTRB(14, 14, 14, 16),
           decoration: BoxDecoration(
             color: C.panel2,
             borderRadius: BorderRadius.circular(14),
@@ -245,7 +245,7 @@ class _GameCardState extends State<_GameCard> {
                   if (widget.best > 0)
                     Text('BEST ${widget.best}',
                         style: const TextStyle(
-                            color: C.brass, fontFamily: kDisplayFont, fontSize: 15)),
+                            color: C.brass, fontFamily: kDisplayFont, fontFamilyFallback: kSerif, fontSize: 15)),
                 ],
               ),
             ],
@@ -273,7 +273,7 @@ class _TauntBubble extends StatelessWidget {
             boxShadow: const [C.cutShadow],
           ),
           child: Text(text,
-              style: TextStyle(fontFamily: kDisplayFont, fontSize: 15, color: accent)),
+              style: TextStyle(fontFamily: kDisplayFont, fontFamilyFallback: kSerif, fontSize: 15, color: accent)),
         ),
       );
 }
@@ -402,7 +402,7 @@ class TitleOverlay extends StatelessWidget {
           if (g.bestRep > 0) ...[
             const SizedBox(height: 20),
             Text('${s.bestLabel}: ${g.bestRep} ${s.repLabel}',
-                style: const TextStyle(color: C.brass, fontFamily: kDisplayFont, fontSize: 18)),
+                style: const TextStyle(color: C.brass, fontFamily: kDisplayFont, fontFamilyFallback: kSerif, fontSize: 18)),
           ],
         ],
       ),
@@ -493,7 +493,7 @@ class ZoneClearOverlay extends StatelessWidget {
           const SizedBox(height: 8),
           Text(g.zone.name,
               style: const TextStyle(
-                  color: C.cream, fontFamily: kDisplayFont, fontSize: 22, letterSpacing: 1)),
+                  color: C.cream, fontFamily: kDisplayFont, fontFamilyFallback: kSerif, fontSize: 22, letterSpacing: 1)),
           const SizedBox(height: 18),
           Wrap(alignment: WrapAlignment.center, spacing: 10, runSpacing: 10, children: [
             _Chip(s.zoneBonusChip, C.brass),
@@ -529,7 +529,7 @@ class GameOverOverlay extends StatelessWidget {
           _big(s.gameOverTitle, C.bad, size: 44),
           const SizedBox(height: 16),
           Text('${g.rep} ${s.repLabel}',
-              style: const TextStyle(color: C.brass, fontFamily: kDisplayFont, fontSize: 30)),
+              style: const TextStyle(color: C.brass, fontFamily: kDisplayFont, fontFamilyFallback: kSerif, fontSize: 30)),
           const SizedBox(height: 4),
           Text('${s.bestLabel}: ${g.bestRep}',
               style: const TextStyle(color: C.txtDim, fontSize: 12, letterSpacing: 2)),
@@ -576,7 +576,7 @@ class WinOverlay extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           Text('${g.rep} ${s.repLabel}',
-              style: const TextStyle(color: C.brass, fontFamily: kDisplayFont, fontSize: 34)),
+              style: const TextStyle(color: C.brass, fontFamily: kDisplayFont, fontFamilyFallback: kSerif, fontSize: 34)),
           const SizedBox(height: 24),
           ChunkyButton(label: s.winDone, onTap: onDone, fontSize: 20),
         ],

@@ -46,6 +46,14 @@ String backdropSvg(SceneKey key) {
       return _ruhrpott;
     case SceneKey.hafen:
       return _hafen;
+    case SceneKey.kafeneio:
+      return _kafeneio;
+    case SceneKey.laiki:
+      return _laiki;
+    case SceneKey.gipedo:
+      return _gipedo;
+    case SceneKey.trapezi:
+      return _trapezi;
   }
 }
 
@@ -362,4 +370,100 @@ final _hafen = _wrap('''
   <g><path d="M980 470 h300 l-40 60 h-220 z" fill="#3a4a54" $_ink/>
     <rect x="1060" y="410" width="120" height="60" fill="#B23A2A" $_ink2/>
     <rect x="1100" y="360" width="16" height="50" fill="#8a8680"/></g>
+''');
+
+// ---- Greek ----
+
+final _kafeneio = _wrap('''
+  <defs><linearGradient id="ka" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#4FA0D8"/><stop offset="1" stop-color="#E7D6A8"/></linearGradient></defs>
+  <rect x="0" y="0" width="1600" height="620" fill="url(#ka)"/>
+  ${_cloud(240, 110, 1.1)} ${_cloud(1080, 130, 1.0)}
+  <rect x="0" y="616" width="1600" height="284" fill="#CBB58A"/>
+  <g stroke="#a9946c" stroke-width="3" opacity="0.5"><line x1="0" y1="700" x2="1600" y2="700"/><line x1="0" y1="790" x2="1600" y2="790"/></g>
+  <!-- whitewashed wall with blue shutters -->
+  <rect x="0" y="300" width="1600" height="320" fill="#F0EAD8" $_ink/>
+  <g $_ink2 fill="#1B6EC2">
+    <rect x="120" y="360" width="120" height="150" rx="4"/><rect x="1240" y="360" width="120" height="150" rx="4"/></g>
+  <g stroke="#0f4a86" stroke-width="3"><line x1="180" y1="360" x2="180" y2="510"/><line x1="1300" y1="360" x2="1300" y2="510"/></g>
+  <!-- KAFENEIO sign -->
+  <g><rect x="640" y="330" width="320" height="70" rx="6" fill="#1B6EC2" $_ink/>
+    <text x="800" y="380" text-anchor="middle" fill="#F0EAD8" font-family="Fredericka,serif" font-size="34">KAFENEIO</text></g>
+  <!-- cafe table with tavli + ouzo -->
+  <g>
+    <rect x="700" y="560" width="12" height="70" fill="#3a2a1a"/>
+    <ellipse cx="706" cy="558" rx="90" ry="18" fill="#1B6EC2" $_ink2/>
+    <rect x="660" y="540" width="90" height="24" rx="3" fill="#7a5a34" $_ink2/>
+    <g stroke="#3a2a1a" stroke-width="2"><path d="M666 542 l10 20 M676 542 l10 20 M686 542 l10 20"/></g>
+    <rect x="770" y="516" width="16" height="42" rx="4" fill="#cfe6d0" $_ink2/>
+  </g>
+  <!-- blue chair -->
+  <g $_ink2 fill="#1B6EC2"><rect x="470" y="560" width="70" height="12"/><rect x="470" y="520" width="12" height="52"/><rect x="528" y="520" width="12" height="52"/></g>
+''');
+
+final _laiki = _wrap('''
+  <defs><linearGradient id="la" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#5AA8DC"/><stop offset="1" stop-color="#E3D2A8"/></linearGradient></defs>
+  <rect x="0" y="0" width="1600" height="640" fill="url(#la)"/>
+  ${_cloud(300, 100, 1.1)} ${_cloud(1120, 120, 1.0)}
+  <rect x="0" y="636" width="1600" height="264" fill="#B89A66" $_ink/>
+  <!-- blue/white striped awnings -->
+  <g>
+    <rect x="80" y="360" width="360" height="24" fill="#1B6EC2" $_ink2/>
+    <g><rect x="80" y="384" width="40" height="34" fill="#1B6EC2"/><rect x="120" y="384" width="40" height="34" fill="#F0EAD8"/><rect x="160" y="384" width="40" height="34" fill="#1B6EC2"/><rect x="200" y="384" width="40" height="34" fill="#F0EAD8"/><rect x="240" y="384" width="40" height="34" fill="#1B6EC2"/><rect x="280" y="384" width="40" height="34" fill="#F0EAD8"/><rect x="320" y="384" width="40" height="34" fill="#1B6EC2"/><rect x="360" y="384" width="40" height="34" fill="#F0EAD8"/><rect x="400" y="384" width="40" height="34" fill="#1B6EC2"/></g>
+    <rect x="90" y="418" width="8" height="180" fill="#5a4e38"/><rect x="422" y="418" width="8" height="180" fill="#5a4e38"/>
+    <rect x="80" y="516" width="360" height="82" fill="#6E5A3A" $_ink2/></g>
+  <g>
+    <rect x="1160" y="360" width="360" height="24" fill="#1B6EC2" $_ink2/>
+    <g><rect x="1160" y="384" width="40" height="34" fill="#F0EAD8"/><rect x="1200" y="384" width="40" height="34" fill="#1B6EC2"/><rect x="1240" y="384" width="40" height="34" fill="#F0EAD8"/><rect x="1280" y="384" width="40" height="34" fill="#1B6EC2"/><rect x="1320" y="384" width="40" height="34" fill="#F0EAD8"/><rect x="1360" y="384" width="40" height="34" fill="#1B6EC2"/><rect x="1400" y="384" width="40" height="34" fill="#F0EAD8"/><rect x="1440" y="384" width="40" height="34" fill="#1B6EC2"/><rect x="1480" y="384" width="40" height="34" fill="#F0EAD8"/></g>
+    <rect x="1170" y="418" width="8" height="180" fill="#5a4e38"/><rect x="1502" y="418" width="8" height="180" fill="#5a4e38"/>
+    <rect x="1160" y="516" width="360" height="82" fill="#6E5A3A" $_ink2/></g>
+  <!-- crates: tomatoes, olives, lemons -->
+  <g $_ink2>
+    <rect x="120" y="540" width="120" height="60" fill="#8a6a3a"/>
+    <g fill="#C1121F"><circle cx="150" cy="546" r="12"/><circle cx="180" cy="546" r="12"/><circle cx="210" cy="546" r="12"/></g>
+    <rect x="280" y="540" width="120" height="60" fill="#8a6a3a"/>
+    <g fill="#3E5E2E"><circle cx="310" cy="546" r="10"/><circle cx="335" cy="546" r="10"/><circle cx="360" cy="546" r="10"/><circle cx="385" cy="546" r="10"/></g>
+    <rect x="1200" y="540" width="120" height="60" fill="#8a6a3a"/>
+    <g fill="#E9C22C"><circle cx="1230" cy="546" r="12"/><circle cx="1260" cy="546" r="12"/><circle cx="1290" cy="546" r="12"/></g></g>
+''');
+
+final _gipedo = _wrap('''
+  <defs><linearGradient id="gi" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#3A6EA5"/><stop offset="1" stop-color="#9FC0D0"/></linearGradient></defs>
+  <rect x="0" y="0" width="1600" height="520" fill="url(#gi)"/>
+  ${_cloud(240, 110, 1.1)} ${_cloud(1080, 100, 1.2)}
+  <rect x="0" y="300" width="1600" height="230" fill="#7E8C9C" $_ink/>
+  <g stroke="#2A1E10" stroke-width="3" opacity="0.5"><line x1="0" y1="360" x2="1600" y2="360"/><line x1="0" y1="420" x2="1600" y2="420"/><line x1="0" y1="480" x2="1600" y2="480"/></g>
+  <g $_ink2>
+    <g fill="#2E7D4A"><circle cx="140" cy="335" r="9"/><circle cx="420" cy="332" r="9"/><circle cx="900" cy="336" r="9"/><circle cx="1360" cy="333" r="9"/></g>
+    <g fill="#F0EAD8"><circle cx="280" cy="392" r="9"/><circle cx="620" cy="388" r="9"/><circle cx="980" cy="392" r="9"/><circle cx="1220" cy="389" r="9"/></g>
+    <g fill="#2E7D4A"><circle cx="200" cy="450" r="9"/><circle cx="520" cy="452" r="9"/><circle cx="1040" cy="448" r="9"/><circle cx="1300" cy="452" r="9"/></g></g>
+  <g><rect x="150" y="120" width="12" height="190" fill="#3a2a18" $_ink2/><rect x="108" y="86" width="96" height="42" rx="5" fill="#4a3a22" $_ink2/>
+    <g fill="#F2D98A"><circle cx="130" cy="100" r="6"/><circle cx="156" cy="100" r="6"/><circle cx="182" cy="100" r="6"/><circle cx="130" cy="116" r="6"/><circle cx="156" cy="116" r="6"/><circle cx="182" cy="116" r="6"/></g></g>
+  <g><rect x="1438" y="120" width="12" height="190" fill="#3a2a18" $_ink2/><rect x="1396" y="86" width="96" height="42" rx="5" fill="#4a3a22" $_ink2/>
+    <g fill="#F2D98A"><circle cx="1418" cy="100" r="6"/><circle cx="1444" cy="100" r="6"/><circle cx="1470" cy="100" r="6"/><circle cx="1418" cy="116" r="6"/><circle cx="1444" cy="116" r="6"/><circle cx="1470" cy="116" r="6"/></g></g>
+  <rect x="0" y="520" width="1600" height="380" fill="#2E7D4A" $_ink/>
+  <g stroke="#EFF6EC" stroke-width="4" opacity="0.6"><line x1="60" y1="560" x2="60" y2="880"/><line x1="0" y1="700" x2="1600" y2="700"/></g>
+''');
+
+final _trapezi = _wrap('''
+  <rect x="0" y="0" width="1600" height="640" fill="#7A4A3A"/>
+  <rect x="0" y="616" width="1600" height="284" fill="#5A3A28" $_ink/>
+  <!-- grapevine across the top -->
+  <path d="M0 120 Q800 60 1600 120" stroke="#4A6A2E" stroke-width="10" fill="none"/>
+  <g fill="#3E6E34" $_ink2><circle cx="200" cy="140" r="26"/><circle cx="520" cy="120" r="26"/><circle cx="900" cy="128" r="26"/><circle cx="1280" cy="130" r="26"/></g>
+  <g fill="#6A3E7A"><circle cx="330" cy="150" r="7"/><circle cx="345" cy="162" r="7"/><circle cx="360" cy="150" r="7"/><circle cx="1080" cy="150" r="7"/><circle cx="1095" cy="162" r="7"/><circle cx="1110" cy="150" r="7"/></g>
+  <!-- warm wall -->
+  <rect x="0" y="180" width="1600" height="300" fill="#B0784E" opacity="0.4"/>
+  <!-- long table with blue-checked cloth -->
+  <rect x="120" y="470" width="1360" height="150" fill="#E7ECF2" $_ink/>
+  <g fill="#1B6EC2" opacity="0.5">
+    <rect x="120" y="470" width="1360" height="16"/><rect x="120" y="530" width="1360" height="16"/><rect x="120" y="590" width="1360" height="16"/>
+    <rect x="240" y="470" width="16" height="150"/><rect x="480" y="470" width="16" height="150"/><rect x="720" y="470" width="16" height="150"/><rect x="960" y="470" width="16" height="150"/><rect x="1200" y="470" width="16" height="150"/></g>
+  <!-- big dish + wine carafe + bread -->
+  <g $_ink2>
+    <ellipse cx="800" cy="500" rx="120" ry="26" fill="#F0EAD8"/><ellipse cx="800" cy="496" rx="90" ry="16" fill="#C77B3A"/>
+    <path d="M560 500 l0 -46 q0 -14 22 -14 q22 0 22 14 l0 46 z" fill="#7a1e34" fill-opacity="0.9"/>
+    <ellipse cx="1080" cy="498" rx="70" ry="18" fill="#D9A24A"/></g>
 ''');

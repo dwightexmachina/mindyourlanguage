@@ -37,7 +37,7 @@ class Hud extends StatelessWidget {
                       TextSpan(
                           text: _commas(g.rep),
                           style: const TextStyle(
-                              fontFamily: kDisplayFont, fontSize: 26, color: C.brass)),
+                              fontFamily: kDisplayFont, fontFamilyFallback: kSerif, fontSize: 26, color: C.brass)),
                       TextSpan(
                           text: '  ${g.s.repLabel}',
                           style: const TextStyle(

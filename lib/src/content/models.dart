@@ -10,6 +10,8 @@ enum SceneKey {
   plaza, cantina, parrilla, feria,
   // German game (one region per zone)
   berlin, biergarten, ruhrpott, hafen,
+  // Greek game (one setting per zone)
+  kafeneio, laiki, gipedo, trapezi,
 }
 
 /// All the UI text for one game, so each game can carry its own language.
