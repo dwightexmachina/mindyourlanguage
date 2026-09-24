@@ -282,23 +282,23 @@ final List<Zone> britishZones = [
               Line.npc('Excuse me. EXCUSE me. Do you work here?'),
               Line.you('...No?'),
             ],
-            insult: 'Typical. You lot are all the same — a right little oik with no manners. I want to speak to whoever is in charge of YOU.',
+            insult: "Course you don't. You lot are all the fucking same — a jumped-up little oik with the manners of a skip. Fetch me whoever's in charge of YOU.",
             comebacks: [
               _best(
-                "There's no one in charge of me, love, that's rather the point of being an adult. Something you'll grasp any decade now.",
+                "No one's in charge of me, love — that's the whole point of being a grown adult. It'll click for you any decade now, somewhere between the third Sauvignon and the divorce.",
                 'BELTER!',
-                "Turning her own <b>manager</b> obsession back on her is chef's kiss. (<b>oik</b> = a rude, low-class lout — she's the one being rude, so it boomerangs beautifully.)",
+                "You turn her <b>manager</b> fixation back on her and slip in a personal dig without raising your voice. (<b>oik</b> = a rude, low-class lout — she's the rude one, so it boomerangs.)",
               ),
               _decent(
-                'Yeah? And I want a word with whoever raised you.',
-                "Fair swing, but it's a playground classic she's heard a hundred times. A <b>decent</b> comeback needs to be about <i>her</i>, specifically.",
+                "Yeah? And I'd like a word with whoever raised YOU.",
+                "Fair swing, but it's a playground classic she's heard a hundred times. Make it about <i>her</i>, specifically.",
               ),
               _weak(
                 'Whatever, Karen.',
                 "Naming the meme is lazy. She feeds on the reaction. <i>Weak sauce.</i>",
               ),
               _grovel(
-                "S-sorry! I didn't mean to be rude!",
+                "S-sorry! I didn't mean anything by it!",
                 "Apologising to a Karen is like chumming the water. Your <b>BOTTLE</b> (your nerve) takes a hit.",
               ),
             ],
@@ -311,15 +311,15 @@ final List<Zone> britishZones = [
         rounds: [
           Round(
             lead: [
-              Line.npc('Hiya! Big smile! Got a sec for children in need of clean water?'),
-              Line.you('I really am in a rush, sorry—'),
+              Line.npc('Hiya! Big smile! Got a sec for kids who need clean water?'),
+              Line.you('I genuinely am in a rush, sorry—'),
             ],
-            insult: "Wow. Too busy to save a life. Must be nice being that tight, mate. Bet you squeak when you walk.",
+            insult: "Wow. Too busy to save a dying kid. Must be nice being a tight-arsed prick, mate. Bet you squeak when you walk.",
             comebacks: [
               _best(
-                "I give directly, not to a bloke on £11 an hour guilt-tripping strangers for a clipboard commission. Nice tabard, though.",
+                "I give direct, not to a bloke on eleven quid an hour emotionally blackmailing strangers for clipboard commission. Love the tabard, though — really screams 'my degree was a mistake'.",
                 'GET IN!',
-                "You out-morals the moraliser AND exposes the sales tactic. (<b>tight</b> = stingy with money — flipping it into where your money actually goes is a proper mic-drop.)",
+                "You out-moral the moraliser AND expose the sales tactic. (<b>tight</b> / tight-arse = stingy — flipping it onto where your money actually goes is a proper mic-drop.)",
               ),
               _decent(
                 "Tight? I'm skint, pal, there's a difference.",
@@ -330,8 +330,8 @@ final List<Zone> britishZones = [
                 "Silence just lets him perform for the queue behind you. Say something with a bit of <b>bite</b>.",
               ),
               _grovel(
-                "Oh gosh, okay, how do I sign up?",
-                "Guilt-tripped into a direct debit on the pavement. Your wallet AND your bottle just took a hit.",
+                "Oh God, fine, where do I sign?",
+                "Guilt-tripped into a direct debit on the pavement. Wallet AND bottle, gone.",
               ),
             ],
           ),
@@ -343,15 +343,15 @@ final List<Zone> britishZones = [
         rounds: [
           Round(
             lead: [
-              Line.npc('Oi. OI. You just look at me?'),
+              Line.npc('Oi. OI. You just eyeball me, yeah?'),
               Line.you('Mate, I was looking at the bus times.'),
             ],
-            insult: "Nah you're moist, fam. Proper wet. Bare moist energy comin off you, innit.",
+            insult: "Nah you're moist, fam. Proper wet. Bare moist energy comin off you, you little pussyhole.",
             comebacks: [
               _best(
-                "Three words for 'damp' in one sentence — your English teacher's the real victim here. Off you pop, the 42's coming.",
+                "Three words for 'damp' in one sentence, fam — your English teacher's the real victim here. Off you trot, the 42's coming and your mum's got your tea on.",
                 'SCENES!',
-                "You clock the limited vocabulary without punching down. (<b>moist</b>/<b>wet</b> = feeble, pathetic — refusing to be rattled is the whole game.)",
+                "You clock the limited vocab and slip in the mum gag without getting rattled. (<b>moist</b>/<b>wet</b> = feeble, pathetic — staying unbothered is the whole game.)",
               ),
               _decent(
                 "Says the lad in a full tracksuit at a bus stop.",
@@ -377,12 +377,12 @@ final List<Zone> britishZones = [
       rounds: [
         Round(
           lead: [
-            Line.npc("Oi! You've gone an' spilled me pint, you absolute weapon."),
+            Line.npc("Oi! You've gone an' spilled me fuckin' pint, you absolute weapon."),
           ],
-          insult: "Go on then — what you gonna do about it, eh?",
+          insult: "Go on then — what you gonna do about it, eh, dickhead?",
           comebacks: [
             _best(
-              "That warm, watered-down gnat's piss? Mate, I did the floor a favour.",
+              "That warm, watered-down gnat's piss? Mate, I did the sticky bastard floor a favour.",
               'BELTER!',
               "You didn't just insult him, you insulted his <i>taste in pints</i>. Specific + on-topic = a proper comeback. (<b>weapon</b> = an idiot, nothing to do with actual weapons.)",
               rep: 140, bottle: 1,
@@ -398,7 +398,7 @@ final List<Zone> britishZones = [
               bottle: -2,
             ),
             _grovel(
-              "So sorry! Let me get you another, yeah?",
+              "Shit, sorry! Let me get you another, yeah?",
               "Grovelling to a bully on the high street? Your <b>BOTTLE</b> just took a proper hit.",
               bottle: -2,
             ),
@@ -406,12 +406,12 @@ final List<Zone> britishZones = [
         ),
         Round(
           lead: [
-            Line.npc("Oh, comedian are we? I'll wipe that smirk off ya."),
+            Line.npc("Oh, a comedian. I'll wipe that smirk off ya, you cheeky cunt."),
           ],
-          insult: "You don't know who you're talkin' to, son.",
+          insult: "You don't know who you're fuckin' talkin' to, son.",
           comebacks: [
             _best(
-              "A bloke in a flat cap crying over a £3.60 lager? I've got a fairly complete picture, yeah.",
+              "A bloke in a flat cap having a meltdown over a £3.60 lager? Yeah, I've got a fairly complete picture, ta.",
               'GET IN!',
               "Deflating the 'do you know who I am' threat by answering it literally is a classic British move. Never take the bait — <b>describe</b> the bait.",
               rep: 150, bottle: 1,
@@ -435,12 +435,12 @@ final List<Zone> britishZones = [
         ),
         Round(
           lead: [
-            Line.npc("...Right. RIGHT. That's it."),
+            Line.npc("...Right. RIGHT. That's fuckin' it."),
           ],
-          insult: "Last chance, clever clogs. Any final words?",
+          insult: "Last chance, clever bollocks. Any final words?",
           comebacks: [
             _best(
-              "Yeah — your round. Two pints. I'll have what you're NOT having, clearly.",
+              "Yeah — your round. Two pints. I'll have whatever you're clearly NOT drinking, you soft lad.",
               'FINISH HIM!',
               "Ending by making HIM buy YOU a drink is total dominance, delivered with a smile. You win the room. That's a comeback that becomes a <i>legend</i>.",
               rep: 200, bottle: 2,
@@ -456,7 +456,7 @@ final List<Zone> britishZones = [
               bottle: -1,
             ),
             _grovel(
-              "Please don't hit me.",
+              "Please, mate, don't hit me.",
               "At the finish line you flinched. Bottle gone.",
               bottle: -3,
             ),
@@ -479,12 +479,12 @@ final List<Zone> britishZones = [
         rounds: [
           Round(
             lead: [
-              Line.npc("*hic* You drinkin' a... is that a LIME AND SODA?"),
+              Line.npc("*hic* You drinkin' a... is that a fuckin' LIME AND SODA?"),
             ],
-            insult: "Bloody hell. You're a proper lightweight, aren't ya. Bet you're tucked up by nine.",
+            insult: "Bloody hell. You're a proper lightweight, aren't ya. Bet you're tucked up in bed by nine with a cocoa, ya big girl's blouse.",
             comebacks: [
               _best(
-                "I'll remember 'lightweight' for you tomorrow morning, when you're texting the group chat an apology you don't remember writing.",
+                "I'll remember 'lightweight' fondly tomorrow morning — while you're texting the group chat an apology you don't remember writing and can't feel your own face.",
                 'BELTER!',
                 "You accept the label and weaponise the contrast — sober-you wins the long game. (<b>lightweight</b> = someone who can't handle much drink; owning it confidently defuses it.)",
               ),
@@ -497,7 +497,7 @@ final List<Zone> britishZones = [
                 "Defending your drink concedes the point entirely. Never explain — flip.",
               ),
               _grovel(
-                "I'll get a proper one, what should I have?",
+                "Fine, I'll get a proper one, what should I have?",
                 "Letting a swaying stranger pick your drink to prove yourself? Bottle down.",
               ),
             ],
@@ -513,10 +513,10 @@ final List<Zone> britishZones = [
               Line.npc("You've been nursing that one drink for an hour, love."),
               Line.you('Just pacing myself.'),
             ],
-            insult: "Pacing yourself. In MY pub. You absolute wet wipe — either drink up or do one.",
+            insult: "Pacing yourself. In MY pub. You absolute wet wipe — either drink up or fuck off out of it.",
             comebacks: [
               _best(
-                "A wet wipe still does more cleaning up than this carpet's seen since the coronation. Same again, when you've a sec.",
+                "A wet wipe still does more cleaning than this carpet's had since the coronation, darlin'. Same again when you've a sec — and have one yourself, God knows you've earned it in here.",
                 'GET IN!',
                 "Matching a landlady's wit with a warm-but-cutting comeback (about her pub, not her) earns respect. (<b>wet wipe</b> = a feeble, spineless person. The trick: agree, then out-banter.)",
               ),
@@ -548,7 +548,7 @@ final List<Zone> britishZones = [
             Line.npc("You're in my seat."),
             Line.you("There's no name on it."),
           ],
-          insult: "There's twenty years of my arse on it, son. That's a name. Move.",
+          insult: "There's twenty years of my arse on it, son. That's a fuckin' name. Move.",
           comebacks: [
             _best(
               "Twenty years in the same seat. Mate, that's not a hard man, that's a National Trust exhibit. I'll leave you to the tour.",
@@ -567,7 +567,7 @@ final List<Zone> britishZones = [
               bottle: -1,
             ),
             _grovel(
-              "So sorry, I didn't know, please don't—",
+              "Shit, sorry, I didn't know, please—",
               "You've announced you're frightened to the one man in the room looking for exactly that. Bottle down.",
               bottle: -2,
             ),
@@ -575,12 +575,12 @@ final List<Zone> britishZones = [
         ),
         Round(
           lead: [
-            Line.npc("Think you're funny? I've flattened blokes for less."),
+            Line.npc("Think you're funny? I've put blokes in hospital for less, you prick."),
           ],
-          insult: "Go on, say one more clever thing. I dare ya.",
+          insult: "Go on, say one more clever thing. I fuckin' dare ya.",
           comebacks: [
             _best(
-              "Mate, it's all handbags and you know it. You're not going to swing in front of the landlady who bars you and you'd miss your own funeral. Pint?",
+              "Mate, it's all handbags and we both know it. You're not swinging in front of the landlady who bars you, and you'd miss your own arse with both hands. Pint?",
               'FINISH HIM!',
               "You name the bluff (<b>handbags</b> = a lot of squaring-up, no actual fighting), remove his audience, and offer peace from a position of strength. Total control.",
               rep: 200, bottle: 2,
@@ -619,17 +619,17 @@ final List<Zone> britishZones = [
         rounds: [
           Round(
             lead: [
-              Line.npc('OI OI! Look at the state of this one!'),
+              Line.npc("OI OI! Look at the fuckin' state of this one!"),
             ],
-            insult: "Your lot are BOTTLEJOBS, mate! Choke every single year! You'll bottle THIS and all!",
+            insult: "Your lot are BOTTLEJOBS, mate! Choke every single year! You'll bottle this an' all, you shithouse!",
             comebacks: [
               _best(
-                "Bottlejobs? We're seventh. You've come here on a Tuesday, in the rain, to sing about US. Who's living in whose head, pal?",
+                "Bottlejobs? We're seventh. You've dragged yourself here on a wet Tuesday to sing about US. Whose head am I living in rent-free, pal?",
                 'GET IN!',
-                "Facts + the classic 'rent free' flip. (<b>bottlejob</b> = a team/person who chokes under pressure — the very thing YOUR bottle meter tracks. Never look rattled and the charge collapses.)",
+                "Facts + the classic 'rent free' flip. (<b>bottlejob</b> / <b>shithouse</b> = someone who chokes under pressure — the very thing your BOTTLE meter tracks. Never look rattled and the charge collapses.)",
               ),
               _decent(
-                "Says the fan of a team that hasn't won owt since the war.",
+                "Says the fan of a team that's won fuck all since the war.",
                 "Solid terrace stuff, but it's not answering the 'bottle' jibe — you've just started a different argument.",
               ),
               _weak(
@@ -651,12 +651,12 @@ final List<Zone> britishZones = [
         rounds: [
           Round(
             lead: [
-              Line.npc("Ha! We just scored and you didn't even see it, you were at the pie stand!"),
+              Line.npc("HA! We scored and you never even saw it — you were at the pie stand, you fat lump!"),
             ],
-            insult: "Typical daytripper. You're not a REAL fan, you're a scarfer. Bet you found us on the telly.",
+            insult: "Typical daytripper. You're not a REAL fan, you're a scarfer. Bet you found us on the telly, you glory-hunting bellend.",
             comebacks: [
               _best(
-                "I've stood in the away end at Hartlepool on a wet Tuesday, mate. You sang 'is this a library' at your own fans last week. Sit down.",
+                "I've stood in the away end at Hartlepool in the pissing rain, mate. You sang 'is this a library' at your OWN fans last week. Sit down and shut up.",
                 'SCENES!',
                 "Out-authenticate the authenticity-cop with a specific, grim away-day — the ultimate fan flex. (<b>scarfer</b> = a glory-hunter who only owns the merch. Specificity is proof.)",
               ),
@@ -686,10 +686,10 @@ final List<Zone> britishZones = [
           lead: [
             Line.npc("*leading the whole away end* WHO ARE YA?! WHO ARE YA?!"),
           ],
-          insult: "Two thousand of us, one of you. Go on. Sing us a song, if you've got the bottle.",
+          insult: "Two thousand of us, one of you, you sad little prick. Go on — sing us a song, if you've got the bollocks.",
           comebacks: [
             _best(
-              "Two thousand blokes who paid forty quid to watch YOUR team lose, and I'm the one you're all looking at. Best turnout you'll have all season, this.",
+              "Two thousand blokes who paid forty quid to watch YOUR team lose, and I'm the one you're all staring at. Best turnout you'll get all season, this.",
               'BELTER!',
               "Turn the mob's size into evidence of THEIR obsession. Outnumbered is only scary if you flinch — the meter's called BOTTLE for a reason.",
               rep: 150, bottle: 1,
@@ -713,12 +713,12 @@ final List<Zone> britishZones = [
         ),
         Round(
           lead: [
-            Line.npc("Ohhh he's got jokes! He thinks he's the main character!"),
+            Line.npc("Ohhh he's got jokes! Thinks he's the main character, this cunt!"),
           ],
-          insult: "You'll be quiet when we score, sunshine. What you gonna do THEN?",
+          insult: "You'll be dead quiet when we score, sunshine. What you gonna do THEN?",
           comebacks: [
             _best(
-              "Same as now: enjoy my afternoon. See, you need the score to feel something. I'm having a lovely time and it's still nil-nil. That's the difference between us.",
+              "Same as now — enjoy my afternoon. See, you need the score to feel something. I'm having a lovely time and it's still nil-nil. That's the difference between us, mate.",
               'FINISH HIM!',
               "You detach your mood from the scoreboard — the one thing a result-obsessed crowd can't argue with. Serenity is the ultimate wind-up. Unbottleable.",
               rep: 200, bottle: 2,
@@ -748,7 +748,7 @@ final List<Zone> britishZones = [
   Zone(
     id: 'dinner',
     name: 'THE DINNER PARTY',
-    tagline: "Everyone's smiling. Nobody means it. Mind the register.",
+    tagline: "Not a swear word all night — and that's exactly what makes this lot lethal. Mind the register.",
     scene: SceneKey.dinner,
     encounters: [
       Encounter(
