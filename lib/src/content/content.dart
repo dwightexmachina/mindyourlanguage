@@ -282,7 +282,7 @@ final List<Zone> britishZones = [
               Line.npc('Excuse me. EXCUSE me. Do you work here?'),
               Line.you('...No?'),
             ],
-            insult: "Course you don't. You lot are all the fucking same — a jumped-up little oik with the manners of a skip. Fetch me whoever's in charge of YOU.",
+            insult: "Course you don't. You lot are all the bloody same — a jumped-up little oik with the manners of a skip. Fetch me whoever's in charge of YOU.",
             comebacks: [
               _best(
                 "No one's in charge of me, love — that's the whole point of being a grown adult. It'll click for you any decade now, somewhere between the third Sauvignon and the divorce.",
@@ -377,7 +377,7 @@ final List<Zone> britishZones = [
       rounds: [
         Round(
           lead: [
-            Line.npc("Oi! You've gone an' spilled me fuckin' pint, you absolute weapon."),
+            Line.npc("Oi! You've gone an' spilled me bleedin' pint, you absolute weapon."),
           ],
           insult: "Go on then — what you gonna do about it, eh, dickhead?",
           comebacks: [
@@ -408,7 +408,7 @@ final List<Zone> britishZones = [
           lead: [
             Line.npc("Oh, a comedian. I'll wipe that smirk off ya, you cheeky cunt."),
           ],
-          insult: "You don't know who you're fuckin' talkin' to, son.",
+          insult: "You don't know who you're bloody talkin' to, son.",
           comebacks: [
             _best(
               "A bloke in a flat cap having a meltdown over a £3.60 lager? Yeah, I've got a fairly complete picture, ta.",
@@ -435,7 +435,7 @@ final List<Zone> britishZones = [
         ),
         Round(
           lead: [
-            Line.npc("...Right. RIGHT. That's fuckin' it."),
+            Line.npc("...Right. RIGHT. That's bleedin' it."),
           ],
           insult: "Last chance, clever bollocks. Any final words?",
           comebacks: [
@@ -479,7 +479,7 @@ final List<Zone> britishZones = [
         rounds: [
           Round(
             lead: [
-              Line.npc("*hic* You drinkin' a... is that a fuckin' LIME AND SODA?"),
+              Line.npc("*hic* You drinkin' a... is that a sodding LIME AND SODA?"),
             ],
             insult: "Bloody hell. You're a proper lightweight, aren't ya. Bet you're tucked up in bed by nine with a cocoa, ya big girl's blouse.",
             comebacks: [
@@ -513,7 +513,7 @@ final List<Zone> britishZones = [
               Line.npc("You've been nursing that one drink for an hour, love."),
               Line.you('Just pacing myself.'),
             ],
-            insult: "Pacing yourself. In MY pub. You absolute wet wipe — either drink up or fuck off out of it.",
+            insult: "Pacing yourself. In MY pub. You absolute wet wipe — either drink up or sod off out of it.",
             comebacks: [
               _best(
                 "A wet wipe still does more cleaning than this carpet's had since the coronation, darlin'. Same again when you've a sec — and have one yourself, God knows you've earned it in here.",
@@ -548,7 +548,7 @@ final List<Zone> britishZones = [
             Line.npc("You're in my seat."),
             Line.you("There's no name on it."),
           ],
-          insult: "There's twenty years of my arse on it, son. That's a fuckin' name. Move.",
+          insult: "There's twenty years of my arse on it, son. That's a bloody name. Move.",
           comebacks: [
             _best(
               "Twenty years in the same seat. Mate, that's not a hard man, that's a National Trust exhibit. I'll leave you to the tour.",
@@ -577,7 +577,7 @@ final List<Zone> britishZones = [
           lead: [
             Line.npc("Think you're funny? I've put blokes in hospital for less, you prick."),
           ],
-          insult: "Go on, say one more clever thing. I fuckin' dare ya.",
+          insult: "Go on, say one more clever thing. I bleedin' dare ya.",
           comebacks: [
             _best(
               "Mate, it's all handbags and we both know it. You're not swinging in front of the landlady who bars you, and you'd miss your own arse with both hands. Pint?",
@@ -619,7 +619,7 @@ final List<Zone> britishZones = [
         rounds: [
           Round(
             lead: [
-              Line.npc("OI OI! Look at the fuckin' state of this one!"),
+              Line.npc("OI OI! Look at the bloody state of this one!"),
             ],
             insult: "Your lot are BOTTLEJOBS, mate! Choke every single year! You'll bottle this an' all, you shithouse!",
             comebacks: [
@@ -629,7 +629,7 @@ final List<Zone> britishZones = [
                 "Facts + the classic 'rent free' flip. (<b>bottlejob</b> / <b>shithouse</b> = someone who chokes under pressure — the very thing your BOTTLE meter tracks. Never look rattled and the charge collapses.)",
               ),
               _decent(
-                "Says the fan of a team that's won fuck all since the war.",
+                "Says the fan of a team that's won sod all since the war.",
                 "Solid terrace stuff, but it's not answering the 'bottle' jibe — you've just started a different argument.",
               ),
               _weak(
